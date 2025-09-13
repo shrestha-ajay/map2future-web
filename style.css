@@ -138,3 +138,17 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Styling for the logo image */
+.logo {
+    max-width: 200px; /* This sets the maximum width of your logo to 200 pixels */
+    height: auto;      /* This ensures the image scales proportionally, maintaining its aspect ratio */
+    display: block;    /* Makes the image behave like a block element, allowing margin: auto for centering */
+    margin: 0 auto;    /* Centers the image horizontally within its parent container */
+    padding: 10px 0;   /* Adds a little vertical spacing around the logo */
+}
+
+/* Optional: If you completely replace the h1 with the logo, you can hide the h1 text */
+header h1 {
+    display: none; /* Hide the text "Map2Future" if you're using the image logo instead */
+}
