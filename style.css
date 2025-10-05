@@ -148,7 +148,7 @@ footer p {
 
 /* Styling for the logo image */
 .logo {
-    max-width: 200px; /* This sets the maximum width of your logo to 200 pixels */
+    max-width: 300px; /* This sets the maximum width of your logo to 200 pixels */
     height: auto;      /* This ensures the image scales proportionally, maintaining its aspect ratio */
     display: block;    /* Makes the image behave like a block element, allowing margin: auto for centering */
     margin: 0 auto;    /* Centers the image horizontally within its parent container */
