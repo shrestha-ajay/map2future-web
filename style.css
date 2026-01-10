@@ -368,3 +368,22 @@ header h1 {
 .signup-animated-logo {
     margin-bottom: 2rem;
 }
+
+/* Mobile Responsiveness for Logo */
+@media (max-width: 768px) {
+    .logo-container {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        font-size: 1.2rem;
+        /* Drastically smaller for very narrow screens */
+    }
+
+    /* Adjust icon margin if needed for smaller size */
+    .logo-icon {
+        margin-right: 0.3rem;
+    }
+}
