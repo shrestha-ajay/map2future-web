@@ -245,6 +245,15 @@ header h1 {
     /* Center the whole logo block since it's in signup now */
 }
 
+.logo-icon {
+    height: 1.5em;
+    /* Proportional to font size */
+    width: auto;
+    margin-right: 0.5rem;
+    transform: translateY(-0.15em);
+    /* Move it up slightly as requested */
+}
+
 .static-text {
     margin-right: 0px;
     /* Removed gap since P is part of the word now, or small gap if needed? 'My Academic P' [suffix] need smooth connection? Actually 'P' is separate from 'ath'. We need 0 gap between P and ath? No, wait. "My Academic P" is one block. "ath" is next. P+ath = Path. So margin-right should be 0. */
