@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
 
     <header>
@@ -22,14 +24,37 @@
         <section class="hero">
             <div class="container">
                 <h2>Your roadmap to a successful career starts here.</h2>
-                <p>Map2Future is a simple, AI-powered tool that provides a personalized academic plan to help you save time, save money, and get job-market ready.</p>
+                <p>Map2Future is a simple, AI-powered tool that provides a personalized academic plan to help you save
+                    time, save money, and get job-market ready.</p>
             </div>
         </section>
 
-        <section class="pain-point">
+        <section class="audience-section">
             <div class="container">
-                <h3>Feeling lost in your college coursework?</h3>
-                <p>Navigating college can be confusing. We help you cut through the noise by providing personally-catered academic plans that align with your career goals.</p>
+                <div class="audience-tabs">
+                    <button class="tab-btn active" data-tab="students">🎓 For Students</button>
+                    <button class="tab-btn" data-tab="parents">👪 For Parents</button>
+                </div>
+
+                <div id="students" class="audience-content active">
+                    <h3>College is complicated. Your path doesn’t have to be.</h3>
+                    <p>Between credits, prerequisites, and registration rules, it’s hard to know if you’re actually on
+                        track—and it’s not you.</p>
+                    <p>MAP2Future helps turn that confusion into a clearer academic path that connects your choices
+                        today to future careers, earnings, and the life you want after graduation.</p>
+                    <p><strong>Built by educators who’ve seen what works—and what doesn’t—so you have clarity for one of
+                            life’s biggest decisions.</strong></p>
+                </div>
+
+                <div id="parents" class="audience-content">
+                    <h3>Make confident college and major decisions—without the confusion.</h3>
+                    <p>Understand how your student’s major choices shape cost, time to graduation, career direction, and
+                        long-term opportunity.</p>
+                    <p>MAP2Future helps connect academic planning to workforce readiness, using data-informed guidance
+                        to support thoughtful preparation for the world your student will enter after college.</p>
+                    <p><strong>Built by educators who’ve seen what works—and what doesn’t—so you have clarity for one of
+                            life’s biggest decisions.</strong></p>
+                </div>
             </div>
         </section>
 
@@ -107,18 +132,22 @@
 
                     <div class="form-group">
                         <label for="major">Interested Major</label>
-                        <input type="text" id="major" name="interested major" placeholder="e.g., Computer Science" required>
+                        <input type="text" id="major" name="interested major" placeholder="e.g., Computer Science"
+                            required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>What's most important for your major?</label>
                         <div class="radio-group">
-                            <label><input type="radio" name="major_importance" value="Money/Salary" required> Money/Salary</label>
-                            <label><input type="radio" name="major_importance" value="Job Prospects" required> Job Prospects</label>
-                            <label><input type="radio" name="major_importance" value="Personal Interest" required> Personal Interest</label>
+                            <label><input type="radio" name="major_importance" value="Money/Salary" required>
+                                Money/Salary</label>
+                            <label><input type="radio" name="major_importance" value="Job Prospects" required> Job
+                                Prospects</label>
+                            <label><input type="radio" name="major_importance" value="Personal Interest" required>
+                                Personal Interest</label>
                         </div>
                     </div>
-                    
+
                     <button type="submit">Get on the MAP</button>
                 </form>
             </div>
@@ -131,5 +160,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

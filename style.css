@@ -51,16 +51,69 @@ header h1 {
     margin: 0 auto;
 }
 
-.pain-point {
+/* Audience Section with Tabs */
+.audience-section {
     background: #f9f9f9;
     padding: 3rem 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
-.pain-point h3 {
-    font-size: 2rem;
+.audience-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid #007BFF;
     color: #007BFF;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+.tab-btn.active {
+    background: #007BFF;
+    color: #fff;
+}
+
+.audience-content {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.audience-content.active {
+    display: block;
+}
+
+.audience-content h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.audience-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .signup-form {
