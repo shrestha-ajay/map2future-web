@@ -112,8 +112,15 @@ header h1 {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .signup-form {
@@ -140,7 +147,7 @@ form {
     padding: 2rem;
     background: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -201,14 +208,154 @@ footer p {
 
 /* Styling for the logo image */
 .logo {
-    max-width: 300px; /* This sets the maximum width of your logo to 200 pixels */
-    height: auto;      /* This ensures the image scales proportionally, maintaining its aspect ratio */
-    display: block;    /* Makes the image behave like a block element, allowing margin: auto for centering */
-    margin: 0 auto;    /* Centers the image horizontally within its parent container */
-    padding: 10px 0;   /* Adds a little vertical spacing around the logo */
+    max-width: 300px;
+    /* This sets the maximum width of your logo to 200 pixels */
+    height: auto;
+    /* This ensures the image scales proportionally, maintaining its aspect ratio */
+    display: block;
+    /* Makes the image behave like a block element, allowing margin: auto for centering */
+    margin: 0 auto;
+    /* Centers the image horizontally within its parent container */
+    padding: 10px 0;
+    /* Adds a little vertical spacing around the logo */
 }
 
 /* Optional: If you completely replace the h1 with the logo, you can hide the h1 text */
 header h1 {
-    display: none; /* Hide the text "Map2Future" if you're using the image logo instead */
+    display: none;
+    /* Hide the text "Map2Future" if you're using the image logo instead */
+}
+
+/* Dynamic Logo Styles */
+.logo-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    /* Adjusted to match previous logo size feel */
+    font-weight: 700;
+    color: #0056b3;
+    /* Darker blue for contrast */
+    padding: 10px 0;
+    justify-content: center;
+    /* Center the whole logo block since it's in signup now */
+}
+
+.static-text {
+    margin-right: 0px;
+    /* Removed gap since P is part of the word now, or small gap if needed? 'My Academic P' [suffix] need smooth connection? Actually 'P' is separate from 'ath'. We need 0 gap between P and ath? No, wait. "My Academic P" is one block. "ath" is next. P+ath = Path. So margin-right should be 0. */
+    color: #333;
+    /* Dark grey for "My Academic" */
+}
+
+.highlight-p {
+    color: #007BFF;
+    /* Match the rotating words color */
+    font-weight: 800;
+    /* Match rotating words weight */
+}
+
+.rotating-words-wrapper {
+    height: 1.4em;
+    /* Height of one line */
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: left;
+    /* Ensure left justification */
+}
+
+.rotating-words {
+    display: flex;
+    flex-direction: column;
+    animation: scrollWords 12s cubic-bezier(0.2, 0, 0.2, 1) infinite;
+    /* total time */
+}
+
+.rotating-words span {
+    display: block;
+    height: 1.4em;
+    line-height: 1.4em;
+    color: #007BFF;
+    /* Brand blue for the changing word */
+    font-weight: 800;
+    text-align: left;
+    /* Explicitly left justify changing words */
+}
+
+/* 
+ Animation Logic:
+ 8 words + 1 duplicate = 9 items.
+ We want to pause on each word.
+ Total distance = 100% / 9 * 8 ... actually let's calculate steps.
+ The list has 9 items. We move from 0 to -800%? No.
+ Height of one item is 1.4em. We move by -100% of container height? No, container is 1 line.
+ We move .rotating-words up. 
+ Total height = 9 * 1.4em.
+ We want to show index 0, then 1, 2... 8, then jump to 0.
+ Keyframes details:
+ 8 steps. 12s total. 1.5s per word.
+ Pause for 1s, scroll for 0.5s.
+ */
+
+@keyframes scrollWords {
+
+    0%,
+    10% {
+        transform: translateY(0);
+    }
+
+    12.5%,
+    22.5% {
+        transform: translateY(-1.4em);
+    }
+
+    25%,
+    35% {
+        transform: translateY(-2.8em);
+    }
+
+    37.5%,
+    47.5% {
+        transform: translateY(-4.2em);
+    }
+
+    50%,
+    60% {
+        transform: translateY(-5.6em);
+    }
+
+    62.5%,
+    72.5% {
+        transform: translateY(-7.0em);
+    }
+
+    75%,
+    85% {
+        transform: translateY(-8.4em);
+    }
+
+    87.5%,
+    97.5% {
+        transform: translateY(-9.8em);
+    }
+
+    100% {
+        transform: translateY(-11.2em);
+    }
+}
+
+.logo {
+    /* Keeping existing rules for fallback or other logos */
+    display: block;
+    margin: 0 auto;
+}
+
+.signup-animated-logo {
+    margin-bottom: 2rem;
 }
