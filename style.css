@@ -262,7 +262,7 @@ header h1 {
 }
 
 .highlight-p {
-    color: #007BFF;
+    color: #0056b3;
     /* Match the rotating words color */
     font-weight: 800;
     /* Match rotating words weight */
@@ -290,7 +290,7 @@ header h1 {
     display: block;
     height: 1.4em;
     line-height: 1.4em;
-    color: #007BFF;
+    color: #0056b3;
     /* Brand blue for the changing word */
     font-weight: 800;
     text-align: left;
